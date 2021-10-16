@@ -49,7 +49,7 @@ contract Daoji is ERC20, Ownable {
     }    
     
     function updateRewards(address _sender, address _reciever) external {
-        require(msg.sender == EmojiMinter);
+        require(msg.sender == EmojiMinter, "Only Callable by Minter Contract");
         
         uint256 sender = pendingAmountEligible(_sender);
         lastClaimed[_sender] = block.timestamp;
