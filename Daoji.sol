@@ -13,7 +13,7 @@ contract Daoji is ERC20, Ownable {
     
     address public EmojiMinter;
     
-    uint256 public rewardRate = 10 ether;
+    uint256 public rewardRate = 5 ether;
     uint256 public initialization;
     
     mapping(address => uint256) pendingRewards;
